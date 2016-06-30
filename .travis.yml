@@ -1,0 +1,5 @@
+env:
+  global:
+  - secure: h4CtaQg+TtiEdWOVXeB4KLZs/xHZ8bL6bMLgxsl5ep9XGsi6uNpgBSqFvLaJAs6LPCydYJnmhgMVcGb9aOwzgnJhEDA6PYCuDj2OSzxjI+CL/gwQjV1u/qtv3IVpPZ22wQ9vU6dY+Y/koPb8cP8y/nYJ6jM+5/yhp6MxXujCljsGN+QLNXeBax5ZyOXSIqvMTc/b+KLXLZ8x/zi7yJJV6eGE/pcHpfvzyn4wJ9fqrzwdyp3SgWY2rFfXYR5xJ/x5U266lSjEgmQyX8oWzMCOHeDEao13RlwfK5/VbuK0hT+DCHXC7hnQIV5Ynkq9WkyIg0ufgtyg5VG78MqpUfdTAgdyXaqCC5dzr6hCOeIXFCrS+KiPovzdiTwNGGidqUDniTwmEUMijR6fqSi2RwNXMjkV4dGAOYsr/4sl0egthGtCf9AYr9zpFr+dg/JvSWYUCrzMVLsHJ9E9/vq5HlRLiExPOV2FyQutZWAYX2QyAxQN5qusDKV59kv9UhxV9aLf9aDllNiNhAr4LkjVs1ovg3MgtGANjUmF7Hthd35GMUBJiDqyPo81Yccrn8hj6+/gRNlQ9QRwVwm3bPUGlOR/AbCnWBrWKmPw9i1xaLE4XoyQwMjIRc57K/BCCrP2OqEopsu32ldXbGyhHXOONAB8MNKUhhuwwDjxnuhIgtPRjXo=
+after_success:
+- '[ "$TRAVIS_BRANCH" == "master" ] && [ $GH_TOKEN ] && bundle exec rake deploy'
